@@ -147,7 +147,7 @@ function BedView(){
                     className={"input"}
                     value={total}
                     onChange={updateText('total')}
-                /> <Text tagName={"h1"}>Verfügbar</Text>
+                /> <Text tagName={"h1"}>Insgesamt</Text>
 
                 <br/>
                 <Button rightIcon="plus"
@@ -170,7 +170,7 @@ function BedView(){
                     className={"input"}
                     value={available}
                     onChange={updateText('available')}
-                /> <Text tagName={"h1"}>Besetzt</Text>
+                /> <Text tagName={"h1"}>Verfügbar</Text>
                 <br/>
                 <Button rightIcon="plus"
                         intent={Intent.SUCCESS}
@@ -187,8 +187,8 @@ function BedView(){
                         loading={loading}
                 />
             </div>
-            <Text tagName={"p"}>Belastung {parseInt(available/total*100)}%</Text>
-            <ProgressBar animate={false} value={available/total} intent={(available/total < .8 ? Intent.SUCCESS : Intent.DANGER)}/>
+            <Text tagName={"p"}>Belastung {parseInt((1-available/total)*100)}%</Text>
+            <ProgressBar animate={false} value={1-(available/total)} intent={(1-(available/total) < .8 ? Intent.SUCCESS : Intent.DANGER)}/>
             <br/><br/><br/><br/><br/><br/><br/>
             <Button rightIcon="log-out"
                     intent={Intent.WARNING}
