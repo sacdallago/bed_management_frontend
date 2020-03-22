@@ -14,6 +14,10 @@ export default class Auth {
         return this.authKey;
     }
 
+    getKey(){
+        return this.authKey;
+    }
+
     isAuthenticated() {
         return this.authKey !== null;
     }
