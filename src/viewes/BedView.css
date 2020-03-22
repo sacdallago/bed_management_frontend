@@ -36,5 +36,5 @@
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-    text-underline: gray;
+    text-decoration: underline gray dotted;
 }

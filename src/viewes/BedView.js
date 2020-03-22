@@ -1,7 +1,7 @@
 // Core
 import React, { useState, useEffect } from 'react';
 import gql from 'graphql-tag';
-import { useQuery } from '@apollo/react-hooks';
+import { useQuery, useMutation } from '@apollo/react-hooks';
 import Auth from "../storage/Auth";
 
 // Components
@@ -24,6 +24,14 @@ query getHospital($input: GetHospitalInput!) {
   }
 `;
 
+const UPDATE_BEDS = gql`
+mutation updateNumberOfBeds($input: UpdateNumberOfBedsInput!){
+      updateNumberOfBeds(input: $input) {
+        success
+      }
+    }
+`;
+
 function BedView(){
     const auth = new Auth();
     const [total, setTotal] = useState(0);
@@ -35,17 +43,25 @@ function BedView(){
             }
         }
     });
+    const [updateBeds, {success}] = useMutation(UPDATE_BEDS);
 
     useEffect(() => {
         if(data && data.getHospital) {
-            console.log(data.getHospital.hospital)
             setTotal(data.getHospital.hospital.totalBeds);
             setAvailable(data.getHospital.hospital.availableBeds);
         }
     }, [data])
 
     const updateType = {
-        'total': setTotal,
+        'total': (total) => {
+            updateBeds({
+                variables: {
+                    input: total
+                }
+            });
+            console.log(success);
+            setTotal(total)
+        },
         'available': setAvailable
     };
 
@@ -96,7 +112,7 @@ function BedView(){
                     className={"input"}
                     value={total}
                     onChange={updateText('total')}
-                /> <Text tagName={"h1"}>Total</Text>
+                /> <Text tagName={"h1"}>Verfügbar</Text>
 
                 <br/>
                 <Button rightIcon="plus"
