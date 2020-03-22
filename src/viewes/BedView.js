@@ -40,6 +40,11 @@ mutation updateNumberOfAvailableBeds($input: UpdateNumberOfAvailableBedsInput!){
     }
 `;
 
+const valueTypes = {
+    TOTAL: 'total',
+    AVAILABLE: 'available'
+};
+
 function BedView(){
     const auth = new Auth();
     const [total, setTotal] = useState(0);
@@ -98,7 +103,7 @@ function BedView(){
         let val = event.target.value;
 
         val = prune_text(val);
-        if(!validate_value(val)) return;
+        if(!validate_value(val, type)) return;
 
         updateType[type](val);
     };
@@ -106,13 +111,15 @@ function BedView(){
     const increment = (type) => () => {
         let val = valueType[type] + 1;
 
+        if(!validate_value(val, type)) return;
+
         updateType[type](val);
     };
 
     const decrement = (type) => () => {
         let val = valueType[type] - 1;
 
-        if(!validate_value(val)) return;
+        if(!validate_value(val, type)) return;
 
         updateType[type](val);
     };
@@ -125,8 +132,12 @@ function BedView(){
         }
     };
 
-    const validate_value = (value) => {
-        return value > -1;
+    const validate_value = (value, type) => {
+        if(type === valueTypes.AVAILABLE){
+            return value > -1 && value <= total;
+        } else {
+            return value > -1;
+        }
     };
 
     return (
