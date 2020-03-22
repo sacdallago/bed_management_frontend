@@ -1,12 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Auth from './storage/Auth';
+import AuthView from './viewes/AuthView';
+
+import '@blueprintjs/core/lib/css/blueprint.css';
+import '@blueprintjs/icons/lib/css/blueprint-icons.css';
+
 import * as serviceWorker from './serviceWorker';
+
+let auth = new Auth();
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      {auth.isAuthenticated() ? <AuthView/> : <AuthView/>}
   </React.StrictMode>,
   document.getElementById('root')
 );
