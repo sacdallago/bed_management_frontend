@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/bed_management_frontend/static/css/main.32ede7c3.chunk.css",
-    "main.js": "/bed_management_frontend/static/js/main.b3665ba7.chunk.js",
-    "main.js.map": "/bed_management_frontend/static/js/main.b3665ba7.chunk.js.map",
+    "main.js": "/bed_management_frontend/static/js/main.7ca8a42e.chunk.js",
+    "main.js.map": "/bed_management_frontend/static/js/main.7ca8a42e.chunk.js.map",
     "runtime-main.js": "/bed_management_frontend/static/js/runtime-main.2089ea21.js",
     "runtime-main.js.map": "/bed_management_frontend/static/js/runtime-main.2089ea21.js.map",
     "static/css/2.bc68a1bb.chunk.css": "/bed_management_frontend/static/css/2.bc68a1bb.chunk.css",
     "static/js/2.6418f8ba.chunk.js": "/bed_management_frontend/static/js/2.6418f8ba.chunk.js",
     "static/js/2.6418f8ba.chunk.js.map": "/bed_management_frontend/static/js/2.6418f8ba.chunk.js.map",
     "index.html": "/bed_management_frontend/index.html",
-    "precache-manifest.5cf93840c29a57ded44e976239da6860.js": "/bed_management_frontend/precache-manifest.5cf93840c29a57ded44e976239da6860.js",
+    "precache-manifest.ad77fce3523d3254b4bf10992dee7a8c.js": "/bed_management_frontend/precache-manifest.ad77fce3523d3254b4bf10992dee7a8c.js",
     "service-worker.js": "/bed_management_frontend/service-worker.js",
     "static/css/2.bc68a1bb.chunk.css.map": "/bed_management_frontend/static/css/2.bc68a1bb.chunk.css.map",
     "static/css/main.32ede7c3.chunk.css.map": "/bed_management_frontend/static/css/main.32ede7c3.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.bc68a1bb.chunk.css",
     "static/js/2.6418f8ba.chunk.js",
     "static/css/main.32ede7c3.chunk.css",
-    "static/js/main.b3665ba7.chunk.js"
+    "static/js/main.7ca8a42e.chunk.js"
   ]
 }
