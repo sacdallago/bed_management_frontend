@@ -38,6 +38,7 @@ function BedView(){
 
     useEffect(() => {
         if(data && data.getHospital) {
+            console.log(data.getHospital.hospital)
             setTotal(data.getHospital.hospital.totalBeds);
             setAvailable(data.getHospital.hospital.availableBeds);
         }
@@ -118,7 +119,7 @@ function BedView(){
                     className={"input"}
                     value={available}
                     onChange={updateText('available')}
-                /> <Text tagName={"h1"}>Verfügbar</Text>
+                /> <Text tagName={"h1"}>Besetzt</Text>
                 <br/>
                 <Button rightIcon="plus"
                         intent={Intent.SUCCESS}
