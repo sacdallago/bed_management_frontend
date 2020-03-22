@@ -1,6 +1,7 @@
 .AuthView {
-    margin: 0 auto;
+    margin: 1em auto;
     max-width: 700px;
+    padding: 1em;
 }
 
 .AuthView > .textInput {

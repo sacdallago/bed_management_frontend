@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Auth from './storage/Auth';
 import AuthView from './viewes/AuthView';
+import BedView from './viewes/BedView';
 
 import '@blueprintjs/core/lib/css/blueprint.css';
 import '@blueprintjs/icons/lib/css/blueprint-icons.css';
@@ -13,7 +14,7 @@ let auth = new Auth();
 
 ReactDOM.render(
   <React.StrictMode>
-      {auth.isAuthenticated() ? <AuthView/> : <AuthView/>}
+      {auth.isAuthenticated() ? <BedView/> : <AuthView/>}
   </React.StrictMode>,
   document.getElementById('root')
 );
