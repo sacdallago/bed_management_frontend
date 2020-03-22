@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/bed_management_frontend/static/css/main.11566036.chunk.css",
+    "main.js": "/bed_management_frontend/static/js/main.f4baec2e.chunk.js",
+    "main.js.map": "/bed_management_frontend/static/js/main.f4baec2e.chunk.js.map",
+    "runtime-main.js": "/bed_management_frontend/static/js/runtime-main.2089ea21.js",
+    "runtime-main.js.map": "/bed_management_frontend/static/js/runtime-main.2089ea21.js.map",
+    "static/css/2.bc68a1bb.chunk.css": "/bed_management_frontend/static/css/2.bc68a1bb.chunk.css",
+    "static/js/2.b7f43914.chunk.js": "/bed_management_frontend/static/js/2.b7f43914.chunk.js",
+    "static/js/2.b7f43914.chunk.js.map": "/bed_management_frontend/static/js/2.b7f43914.chunk.js.map",
+    "index.html": "/bed_management_frontend/index.html",
+    "precache-manifest.313ac6b9cc0724ca969ae982ca693cb6.js": "/bed_management_frontend/precache-manifest.313ac6b9cc0724ca969ae982ca693cb6.js",
+    "service-worker.js": "/bed_management_frontend/service-worker.js",
+    "static/css/2.bc68a1bb.chunk.css.map": "/bed_management_frontend/static/css/2.bc68a1bb.chunk.css.map",
+    "static/css/main.11566036.chunk.css.map": "/bed_management_frontend/static/css/main.11566036.chunk.css.map",
+    "static/js/2.b7f43914.chunk.js.LICENSE.txt": "/bed_management_frontend/static/js/2.b7f43914.chunk.js.LICENSE.txt",
+    "static/media/blueprint-icons.css": "/bed_management_frontend/static/media/icons-20.cef8cdbb.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2089ea21.js",
+    "static/css/2.bc68a1bb.chunk.css",
+    "static/js/2.b7f43914.chunk.js",
+    "static/css/main.11566036.chunk.css",
+    "static/js/main.f4baec2e.chunk.js"
+  ]
+}
