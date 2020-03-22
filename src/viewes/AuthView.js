@@ -15,8 +15,9 @@ class AuthView extends Component {
         this.auth = new Auth();
     }
 
-    updateText = (text) => {
-        console.log(text)
+    updateText = (event) => {
+        let text = event.target.value;
+
         this.setState({
             textInput: text
         })
@@ -26,21 +27,18 @@ class AuthView extends Component {
         if(this.state.textInput && this.state.textInput !== ""){
             this.auth.auth(this.state.textInput);
         }
+        window.location.reload();
     };
 
     render(){
         return (
             <div className="AuthView">
                 <Text tagName={"h1"}>Gib deine user ID ein</Text>
-                <EditableText multiline={false}
-                              minLines={1}
-                              maxLines={1}
-                              placeholder={"68273"}
-                              className={"textInput"}
-                              value={this.state.textInput}
-                              onConfirm={this.authenticate}
-                              onChange={this.updateText}
-                              onCancel={() => this.setState({textInput: ""})}
+                <input
+                    className={"input"}
+                    value={this.state.textInput}
+                    onChange={this.updateText}
+                    autoFocus={true}
                 />
                 <Button rightIcon="arrow-right" intent="success" className={"button"} onClick={this.authenticate}/>
                 <Text tagName={"p"}>Bei fragen, schick uns eine email.</Text>

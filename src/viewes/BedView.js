@@ -5,7 +5,7 @@ import { useQuery } from '@apollo/react-hooks';
 import Auth from "../storage/Auth";
 
 // Components
-import {Text, Button, Intent} from '@blueprintjs/core'
+import {Text, Button, Intent, ProgressBar} from '@blueprintjs/core'
 
 // Styles
 import './BedView.css';
@@ -38,7 +38,6 @@ function BedView(){
 
     useEffect(() => {
         if(data && data.getHospital) {
-            console.log(data)
             setTotal(data.getHospital.hospital.totalBeds);
             setAvailable(data.getHospital.hospital.availableBeds);
         }
@@ -136,7 +135,16 @@ function BedView(){
                         loading={loading}
                 />
             </div>
-
+            <Text tagName={"p"}>Belastung {parseInt(available/total*100)}%</Text>
+            <ProgressBar animate={false} value={available/total} intent={(available/total < .8 ? Intent.SUCCESS : Intent.DANGER)}/>
+            <br/><br/><br/><br/><br/><br/><br/>
+            <Button rightIcon="log-out"
+                    intent={Intent.WARNING}
+                    onClick={() => auth.logoff() && window.location.reload()}
+                    text={"Log out"}
+                    loading={loading}
+            />
+            <br/><br/><br/><br/><br/><br/><br/>
             <Text tagName={"p"}>Bei fragen, schick uns eine email.</Text>
         </div>
     );
