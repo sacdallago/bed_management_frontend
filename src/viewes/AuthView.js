@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Auth from "../storage/Auth";
 import './AuthView.css';
 
-import {Text, EditableText, Button} from '@blueprintjs/core'
+import {Text, Button} from '@blueprintjs/core'
 
 class AuthView extends Component {
     constructor() {

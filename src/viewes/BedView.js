@@ -24,9 +24,17 @@ query getHospital($input: GetHospitalInput!) {
   }
 `;
 
-const UPDATE_BEDS = gql`
+const UPDATE_TOTAL_BEDS = gql`
 mutation updateNumberOfBeds($input: UpdateNumberOfBedsInput!){
       updateNumberOfBeds(input: $input) {
+        success
+      }
+    }
+`;
+
+const UPDATE_AVAILABLE_BEDS = gql`
+mutation updateNumberOfAvailableBeds($input: UpdateNumberOfAvailableBedsInput!){
+      updateNumberOfAvailableBeds(input: $input) {
         success
       }
     }
@@ -43,7 +51,9 @@ function BedView(){
             }
         }
     });
-    const [updateBeds, {success}] = useMutation(UPDATE_BEDS);
+    const [updateTotalBeds, {s_1}] = useMutation(UPDATE_TOTAL_BEDS);
+    const [updateAvailableBeds, {s_2}] = useMutation(UPDATE_AVAILABLE_BEDS);
+
 
     useEffect(() => {
         if(data && data.getHospital) {
@@ -54,15 +64,29 @@ function BedView(){
 
     const updateType = {
         'total': (total) => {
-            updateBeds({
+            updateTotalBeds({
                 variables: {
-                    input: total
+                    input: {
+                        hospitalId: auth.getKey(),
+                        numberOfBeds: parseInt(total)
+                    }
                 }
             });
-            console.log(success);
+            console.log(s_1);
             setTotal(total)
         },
-        'available': setAvailable
+        'available': (total) => {
+            updateAvailableBeds({
+                variables: {
+                    input: {
+                        hospitalId: auth.getKey(),
+                        numberOfAvailableBeds: parseInt(total)
+                    }
+                }
+            });
+            console.log(s_2);
+            setAvailable(total)
+        },
     };
 
     const valueType = {
