@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "484bef6abd7480ea1ac90ac94b086269",
+    "revision": "d8455f11ce389f5c4db67dbc733ee32e",
     "url": "/bed_management_frontend/index.html"
   },
   {
-    "revision": "e43d2fef87b4cf5d7449",
+    "revision": "c9a44ac3a7297f6c1d67",
     "url": "/bed_management_frontend/static/css/2.bc68a1bb.chunk.css"
   },
   {
-    "revision": "37ecd5efa3f6ee2c0eca",
+    "revision": "ff8dbf0a07e192326618",
     "url": "/bed_management_frontend/static/css/main.32ede7c3.chunk.css"
   },
   {
-    "revision": "e43d2fef87b4cf5d7449",
-    "url": "/bed_management_frontend/static/js/2.07b9fcc9.chunk.js"
+    "revision": "c9a44ac3a7297f6c1d67",
+    "url": "/bed_management_frontend/static/js/2.6418f8ba.chunk.js"
   },
   {
     "revision": "e18637604789af6a40503615de5bd745",
-    "url": "/bed_management_frontend/static/js/2.07b9fcc9.chunk.js.LICENSE.txt"
+    "url": "/bed_management_frontend/static/js/2.6418f8ba.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "37ecd5efa3f6ee2c0eca",
-    "url": "/bed_management_frontend/static/js/main.609ce763.chunk.js"
+    "revision": "ff8dbf0a07e192326618",
+    "url": "/bed_management_frontend/static/js/main.b3665ba7.chunk.js"
   },
   {
     "revision": "a8ce46c81f135509eaf0",
